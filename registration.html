@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration Form</title>
+		<style>
+		*{margin:0px;padding:0px;}
+			body{
+			margin:0px auto;
+			background-image:url("poly.jpg");			
+			background-size:100%;
+			}
+
+			.container{
+			width:500px;
+			height:400px;
+			background-color:#000;
+			margin:0px auto;
+			text-align:center;
+			margin-top:150px;
+			border-radius:5px;
+			background:rgba(0,0,0,0.70);
+			}
+
+			.container img{
+			width:105px;
+			height:100px;
+			border-radius:500px;
+			background-size: 90%; 
+			background:#8E24AA;
+			padding :5px;
+			margin-top:-60px;
+			margin-bottom:30px;
+			}
+			input[type="text"]{
+			width:300px;
+			height:45px;
+			font-size:17px;
+			margin-bottom:15px;
+			padding-left:30px;
+			background:#fff;
+			border:none;
+			}
+
+			.submit{
+			border:none;
+			padding:15px 30px;
+			background:#8e24aa;
+			border-radius:5px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<img src="iic.jpg" alt="founder">
+			<form name="abc" action="form.php" method='POST' enctype="multipart/form-data">
+			<div class="form-input">
+			<input type="text" name="name" placeholder="Enter your name">
+			</div>
+			<div class="form-input">
+			<input type="text" name="course" placeholder="Enter your course">
+			</div>
+			<input type="submit" value="SUBMIT" name="submit" class="submit">
+			</form>
+		</div>
+	</body>
+</html>
