@@ -32,15 +32,16 @@ if(isset($_POST['submit'])){
         //set the data of the CSV
         $Content .= "$name, $course\n";
 
+        $list = array(
+            array($name,$course));
+
         # set the file name and create CSV file
         $FileName = "registrations.csv";
-        header('Content-Type: application/csv'); 
-        header('Content-Disposition: attachment; filename="' . $FileName . '"'); 
-        $fp = fopen('registrations.csv','a');
-        fputcsv($fp,$Content);
-        echo $Content;
+        $fp = fopen('registrations.csv',"a");
+        foreach($list as $fields){
+            fputcsv($fp,$fields);
+        }
         fclose($fp);
-        exit();
     }
 }
 
