@@ -42,6 +42,7 @@ if(isset($_POST['submit'])){
             fputcsv($fp,$fields);
         }
         fclose($fp);
+        exit;
     }
 }
 
