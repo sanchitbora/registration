@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="animate.css">
 		<title>Registration Form</title>
 		<style>
+		
 		*{margin:0px;padding:0px;}
 			body{
 			margin:0px auto;
 			background-image:url("poly.jpg");			
-			background-size:100%;
+			
+			background-repeat: no-repeat;
+			background-position: center center;
 			}
 
 			.container{
@@ -48,12 +52,55 @@
 			border-radius:5px;
 			}
 
+			@media screen and (max-width:500px){
+			.container{
+			width:400px;
+			height:400px;
+			background-color:#000;
+			margin:0px auto;
+			text-align:center;
+			margin-top:70px;
+			border-radius:5px;
+			background:rgba(0,0,0,0.70);
+
+
+			}
+
+			.container img{
+			width:80px;
+			height:80px;
+			border-radius:250px;
+			background-size: 90%; 
+			background:#8E24AA;
+			padding :5px;
+			margin-top:-45px;
+			margin-bottom:15px;
+			}
+			input[type="text"]{
+			width:250px;
+			height:50px;
+			font-size:14px;
+			margin-bottom:10px;
+			padding-left:15px;
+			background:#fff;
+			border:none;
+			}
+
+			.submit{
+			border:none;
+			padding:9px 19px;
+			background:#8e24aa;
+			border-radius:5px;
+			margin-top: 20px;
+			}
+		}
+
 		</style>
 	</head>
 	<body>
 		<div class="container">
-			<img src="iic.jpg" alt="founder">
-			<form name="abc" action="form.php" method='POST' enctype="multipart/form-data">
+			<img src="iic.jpg" alt="founder" class="animated infinite pulse">
+			<form name="abc" action="form.php" method="post" enctype="multipart/form-data">
 			<div class="form-input">
 			<input type="text" name="name" placeholder="Enter your name">
 			</div>
